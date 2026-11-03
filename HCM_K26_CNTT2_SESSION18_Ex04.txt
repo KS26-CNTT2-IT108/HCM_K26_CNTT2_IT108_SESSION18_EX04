@@ -1,0 +1,30 @@
+SESSION18
+Bài 4 : Sự cố xung đột phiên đăng nhập trên trình duyệt
+
+Tên lớp: HCM K26 CNTT2
+Môn học: Nhập môn công nghệ thông tin
+Họ và tên: LƯƠNG THANH THƯ
+
+Phần 1. Phân tích
+Mô hình 3 Profile độc lập: Personal (cá nhân), Work (GreenLog, GitHub, Canvas LMS, Portal), Sandbox (kiểm thử). Mỗi profile có cookie, mật khẩu và lịch sử riêng nên không xung đột phiên, và dữ liệu Personal không lộ khi trình chiếu ở Work.
+Incognito Mode và Dedicated Profile:
+Tiêu chí			Incognito Mode				Dedicated Profile
+Nơi lưu				Tạm thời trên RAM			Lâu dài trên ổ cứng
+Khi đóng cửa sổ			Xóa sạch cookie, lịch sử, phiên		Giữ nguyên
+Mật khẩu, bookmark		Không lưu				Lưu và dùng lại được
+Cây Bookmark (profile Work): Work gồm Dev (GitHub), Học tập (Canvas LMS), Công ty (Portal, GreenLog).
+
+Phần 2. Triển khai
+Tạo profile: bấm ảnh đại diện, chọn Add profile, đặt tên và màu riêng cho từng profile.
+Cloud Sync: mỗi profile bật Sync bằng tài khoản Google riêng, chọn đồng bộ Bookmarks, Mật khẩu, Tiện ích.
+Khi đổi máy: cài trình duyệt, đăng nhập đúng tài khoản sync thì bookmark tự khôi phục.
+
+Phần 3. Kiểm thử
+Quy tắc dùng Guest Profile trên máy công cộng:
+
+Không đăng nhập vào profile cá nhân, không bật Sync.
+Không lưu mật khẩu, không tải file nhạy cảm.
+Đăng xuất mọi dịch vụ rồi đóng cửa sổ Guest để xóa dữ liệu.
+Bật xác thực hai lớp cho tài khoản quan trọng.
+
+
